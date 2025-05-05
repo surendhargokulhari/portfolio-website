@@ -78,3 +78,31 @@ sr.reveal('.contact__button', {delay: 600})
 
 
 
+
+
+  const form = document.getElementById("contact-form");
+  const popup = document.getElementById("popup-message");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+    })
+      .then(response => {
+        if (response.ok) {
+          popup.style.display = "block";
+          form.reset();
+        } else {
+          popup.innerText = "❌ Something went wrong. Please try again.";
+          popup.style.display = "block";
+        }
+      })
+      .catch(() => {
+        popup.innerText = "❌ Error sending message.";
+        popup.style.display = "block";
+      });
+  });

@@ -150,35 +150,42 @@
                 </div>
             </section>
 
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <div class="contact__info">
-                        <h3 class="contact__subtitle">EMAIL</h3>
-                        <span class="contact__text">gokulhari182@gmail.com</span>
-
-                        <h3 class="contact__subtitle">PHONE</h3>
-                        <span class="contact__text">7639019726</span>
-
-                        <h3 class="contact__subtitle">ADRESS</h3>
-                        <span class="contact__text">Coimbatore</span>
-                    </div>
-
-                    <form action="" class="contact__form">
-                        <div class="contact__inputs">
-                            <input type="text" placeholder="Name" class="contact__input">
-                            <input type="mail" placeholder="Email" class="contact__input">
-                        </div>
-
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-
-                        <input type="submit" value="submit" class="contact__button">
-                    </form>
-                </div>
-            </section>
-        </main>
+          <!--===== CONTACT =====-->
+<section class="contact section" id="contact">
+    <h2 class="section-title">Contact</h2>
+  
+    <div class="contact__container bd-grid">
+      <div class="contact__info">
+        <h3 class="contact__subtitle">EMAIL</h3>
+        <span class="contact__text">gokulhari182@gmail.com</span>
+  
+        <h3 class="contact__subtitle">PHONE</h3>
+        <span class="contact__text">7639019726</span>
+  
+        <h3 class="contact__subtitle">ADDRESS</h3>
+        <span class="contact__text">Coimbatore</span>
+      </div>
+  
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact__form">
+        <input type="hidden" name="access_key" value="a5e99171-32f2-4140-98b8-fda2eb2f93d7">
+  
+        <div class="contact__inputs">
+          <input type="text" name="name" placeholder="Name" class="contact__input" required>
+          <input type="email" name="email" placeholder="Email" class="contact__input" required>
+        </div>
+  
+        <textarea name="message" placeholder="Your message" cols="30" rows="10" class="contact__input" required></textarea>
+  
+        <input type="submit" value="Submit" class="contact__button">
+      </form>
+  
+      <!-- Popup Message -->
+      <div id="popup-message" style="display: none; margin-top: 20px; color: green; font-weight: bold;">
+        ✅ Your message has been sent successfully!
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </section>
 
         <!--===== FOOTER =====-->
         <footer class="footer section">
